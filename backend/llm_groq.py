@@ -22,6 +22,9 @@ llm = ChatGroq(model="gemma2-9b-it", groq_api_key=groq_api_key)
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
+base_dir = os.path.join(os.path.dirname(__file__), "..", "lessons_faiss")
+base_dir = os.path.abspath(base_dir) 
+
 store = {}
 
 def get_session_history(session_id: str) -> BaseChatMessageHistory:
@@ -32,7 +35,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 def get_all_messages(x):
     return " ".join(msg.content for msg in x["messages"])
 
-def build_rag_chain(file_name: str, base_dir: str = r"C:\Users\Administrator\Documents\generative_ai\llm-exercise\lessons_faiss"): 
+def build_rag_chain(file_name: str): 
     path = os.path.join(base_dir, file_name)
     vectorstore = FAISS.load_local(
         folder_path=path,

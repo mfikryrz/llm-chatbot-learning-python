@@ -7,7 +7,8 @@ from langchain_community.document_loaders import UnstructuredMarkdownLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 
 load_dotenv()
-path = r'C:\Users\Administrator\Documents\generative_ai\llm-exercise\lessons'
+path = os.path.join(os.path.dirname(__file__), "..", "lessons")
+path = os.path.abspath(path)
 
 # embeddings = OllamaEmbeddings(model="nomic-embed-text:latest")
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
