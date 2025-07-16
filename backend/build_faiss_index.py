@@ -9,9 +9,9 @@ from langchain_huggingface import HuggingFaceEmbeddings
 load_dotenv()
 path = r'C:\Users\Administrator\Documents\generative_ai\llm-exercise\lessons'
 
-embeddings = OllamaEmbeddings(model="nomic-embed-text:latest")
-# os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
-# embeddings = HuggingFaceEmbeddings(model_name="intfloat/e5-large-v2")
+# embeddings = OllamaEmbeddings(model="nomic-embed-text:latest")
+os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 for file in os.listdir(path):
     loader=UnstructuredMarkdownLoader(os.path.join(path, file))

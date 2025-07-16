@@ -16,11 +16,11 @@ load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 
 llm = ChatGroq(model="gemma2-9b-it", groq_api_key=groq_api_key)
-embeddings = OllamaEmbeddings(model="nomic-embed-text:latest")
+# embeddings = OllamaEmbeddings(model="nomic-embed-text:latest")
 
 
-# os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
-# embeddings = HuggingFaceEmbeddings(model_name="intfloat/e5-large-v2")
+os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 store = {}
 
