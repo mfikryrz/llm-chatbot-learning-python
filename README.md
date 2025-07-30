@@ -6,8 +6,8 @@ This project is an educational chatbot application powered by RAG (Retrieval-Aug
 * **Embeddings from HuggingFace (`all-MiniLM-L6-v2`)**
 * **Streamlit** as an alternative interface (legacy)
 * **Markdown files** as the knowledge base
-
 You can see the app on this link [LLM-based Education App](https://llm-python-learn.streamlit.app/)
+
 ---
 
 ## 🗂 Project Structure
