@@ -7,6 +7,7 @@ This project is an educational chatbot application powered by RAG (Retrieval-Aug
 * **Streamlit** as an alternative interface (legacy)
 * **Markdown files** as the knowledge base
 
+You can see the app on this link [LLM-based Education App](https://llm-python-learn.streamlit.app/)
 ---
 
 ## 🗂 Project Structure
